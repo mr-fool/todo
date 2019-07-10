@@ -17,7 +17,7 @@ class App extends Component{
       },
       {
         id: 3,
-        title: "Take out the mt dew",
+        title: "shitposting",
         completed: false
       }
     ]
