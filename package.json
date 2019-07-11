@@ -29,6 +29,7 @@
     ]
   },
   "devDependencies": {
+    "react-router-dom": "^5.0.1",
     "uuid": "^3.3.2"
   }
 }
