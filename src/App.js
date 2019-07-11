@@ -2,23 +2,25 @@ import React, {Component} from 'react';
 import Todos from './components/Todo';
 import AddTodo from './components/AddTodo';
 import Header from './components/layout/Header';
+import uuid from "uuid";
+
 import './App.css';
 
 class App extends Component{
   state = {
     todos: [
       {
-        id: 1,
+        id: uuid.v4(),
         title: "Take out the poop bottle",
         completed: false
       },
       {
-        id: 2,
+        id: uuid.v4(),
         title: "Take out the piss bottle",
         completed: true
       },
       {
-        id: 3,
+        id: uuid.v4(),
         title: "shitposting",
         completed: false
       }
@@ -44,7 +46,7 @@ class App extends Component{
   //Add Todo
   addTodo = (title) => {
     const newTodo = {
-      id: 4,
+      id: uuid.v4(),
       title: title,
       completed: false
     }
