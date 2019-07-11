@@ -5,28 +5,18 @@ import About from './components/pages/About';
 import Header from './components/layout/Header';
 import uuid from "uuid";
 import {BrowserRouter as Router, Route} from "react-router-dom";
+import axios from 'axios';
 
 import './App.css';
 
 class App extends Component{
   state = {
-    todos: [
-      {
-        id: uuid.v4(),
-        title: "Take out the poop bottle",
-        completed: false
-      },
-      {
-        id: uuid.v4(),
-        title: "Take out the piss bottle",
-        completed: true
-      },
-      {
-        id: uuid.v4(),
-        title: "shitposting",
-        completed: false
-      }
-    ]
+    todos: []
+  }
+
+  componentDidMount() {
+    axios.get("https://jsonplaceholder.typicode.com/todos")
+      .then(res =>console.log(res.data))
   }
 
   //Toggle Complete
