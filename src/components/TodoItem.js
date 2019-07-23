@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from "prop-types";
+import Button from "@material-ui/core/Button";
+import { makeStyles } from "@material-ui/core/styles";
+import DeleteIcon from "@material-ui/icons/Delete";
 
 export class TodoItem extends Component {
     getStyle = () => {
@@ -29,7 +32,10 @@ export class TodoItem extends Component {
                 <p>
                     <input type="checkbox" onChange={this.props.markComplete.bind(this,id)}/> {" "}
                     {title}
-                    <button onClick={this.props.delTodo.bind(this, id)} style={btnStyle}>x</button>
+                    {/*<button onClick={this.props.delTodo.bind(this, id)} style={btnStyle}>x</button>*/}
+                    <Button onClick={this.props.delTodo.bind(this, id)} variant="contained" color="secondary" className={classes.button}>
+                        <DeleteIcon className={classes.rightIcon} />
+                    </Button>
                 </p>
             </div>
         )
