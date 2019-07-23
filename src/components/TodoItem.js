@@ -27,7 +27,6 @@ export class TodoItem extends Component {
 
     render() {
         const { id,title } =this.props.todo;
-        const classes = useStyles();
         return (
             
             <div style={this.getStyle()}>
@@ -58,7 +57,7 @@ const btnStyle = {
     borderRadius: '50%',
     float: "right"
 }
-const useStyles = makeStyles(theme => ({
+const styles = {
     button: {
       margin: theme.spacing(1),
     },
@@ -70,6 +69,6 @@ const useStyles = makeStyles(theme => ({
     },
     iconSmall: {
       fontSize: 20,
-    },
-  }));
+    }
+  };
 export default TodoItem
