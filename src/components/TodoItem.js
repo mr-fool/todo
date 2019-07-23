@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from "prop-types";
 import Button from "@material-ui/core/Button";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, withStyles } from "@material-ui/core/styles";
 import DeleteIcon from "@material-ui/icons/Delete";
-import ReactDOM from 'react-dom';
-
 
 export class TodoItem extends Component {
     getStyle = () => {
@@ -29,7 +27,9 @@ export class TodoItem extends Component {
 
     render() {
         const { id,title } =this.props.todo;
+        const classes = useStyles();
         return (
+            
             <div style={this.getStyle()}>
                 <p>
                     <input type="checkbox" onChange={this.props.markComplete.bind(this,id)}/> {" "}
