@@ -51,14 +51,6 @@ TodoItem.propTypes = {
     delTodo: PropTypes.func.isRequired
 }
 
-const btnStyle = {
-    background: "#ff0000",
-    color: "#fff",
-    border: 'none',
-    padding: "5px 9px",
-    borderRadius: '50%',
-    float: "right"
-}
 const styles = makeStyles(theme => ({
     button: {
       margin: theme.spacing(1),
