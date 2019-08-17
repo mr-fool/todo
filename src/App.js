@@ -5,6 +5,7 @@ import About from './components/pages/About';
 import Header from './components/layout/Header';
 import {BrowserRouter as Router, Route} from "react-router-dom";
 import axios from 'axios';
+import { ThemeProvider } from '@material-ui/styles';
 
 import './App.css';
 
@@ -47,6 +48,7 @@ class App extends Component{
   }
 
   render() {
+    <ThemeProvider theme={{}}> 
     return (
       <Router>
           <div className="App">
@@ -65,6 +67,7 @@ class App extends Component{
           </div>
       </Router>
     );
+    </ThemeProvider>
 
   }
   
