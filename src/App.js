@@ -6,6 +6,7 @@ import Header from './components/layout/Header';
 import {BrowserRouter as Router, Route} from "react-router-dom";
 import axios from 'axios';
 import { MuiThemeProvider } from '@material-ui/core/styles';
+import { createMuiTheme } from "@material-ui/core/styles";
 
 import './App.css';
 
@@ -50,7 +51,7 @@ class App extends Component{
   render() {
     
     return (
-      <MuiThemeProvider theme={{}}>
+      <MuiThemeProvider theme={createMuiTheme({})}>
       <Router>
           <div className="App">
             <div className="container">
