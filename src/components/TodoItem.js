@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Button from "@material-ui/core/Button";
 import { withStyles } from "@material-ui/core/styles";
 import DeleteIcon from "@material-ui/icons/Delete";
+import { makeStyles } from '@material-ui/core/styles';
 
 export class TodoItem extends Component {
     getStyle = () => {
@@ -59,7 +60,7 @@ const btnStyle = {
     borderRadius: '50%',
     float: "right"
 }
-const styles = (theme) => {
+const styles = makeStyles(theme => ({
     button: {
       margin: theme.spacing(1),
     },
@@ -71,6 +72,6 @@ const styles = (theme) => {
     },
     iconSmall: {
       fontSize: 20,
-    }
-  };
+    },
+  }));
   export default withStyles(styles)(TodoItem);
