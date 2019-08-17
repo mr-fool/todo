@@ -49,7 +49,7 @@ class App extends Component{
 
   render() {
     return (
-      <MuiThemeProvider>
+      <MuiThemeProvider theme={{}}>
       <Router>
           <div className="App">
             <div className="container">
