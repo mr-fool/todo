@@ -51,7 +51,8 @@ TodoItem.propTypes = {
     delTodo: PropTypes.func.isRequired
 }
 
-const styles = (theme => ({
+const styles = (theme) => ({
+
     button: {
       margin: theme.spacing(1),
     },
@@ -64,5 +65,5 @@ const styles = (theme => ({
     iconSmall: {
       fontSize: 20,
     },
-  }));
+  });
   export default withStyles(styles)(TodoItem);
