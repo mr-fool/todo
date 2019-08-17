@@ -27,6 +27,7 @@ export class TodoItem extends Component {
 
     render() {
         const { id,title } =this.props.todo;
+        console.log(id);
         return (
             
             <div style={this.getStyle()}>
