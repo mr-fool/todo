@@ -51,7 +51,7 @@ TodoItem.propTypes = {
     delTodo: PropTypes.func.isRequired
 }
 
-const styles = withStyles(theme => ({
+const styles = (theme => ({
     button: {
       margin: theme.spacing(1),
     },
