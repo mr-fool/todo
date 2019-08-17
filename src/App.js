@@ -5,7 +5,7 @@ import About from './components/pages/About';
 import Header from './components/layout/Header';
 import {BrowserRouter as Router, Route} from "react-router-dom";
 import axios from 'axios';
-import { ThemeProvider } from '@material-ui/styles';
+import { MuiThemeProvider } from '@material-ui/core/styles';
 
 import './App.css';
 
@@ -13,7 +13,7 @@ class App extends Component{
   state = {
     todos: []
   }
-
+  
   componentDidMount() {
     axios.get("https://jsonplaceholder.typicode.com/todos?_limit=10")
       .then(res =>this.setState({todos: res.data}))
@@ -49,7 +49,7 @@ class App extends Component{
 
   render() {
     return (
-      <ThemeProvider>
+      <MuiThemeProvider>
       <Router>
           <div className="App">
             <div className="container">
@@ -66,7 +66,7 @@ class App extends Component{
               </div>  
           </div>
       </Router>
-      </ThemeProvider>
+      </MuiThemeProvider>
     );
 
   }
