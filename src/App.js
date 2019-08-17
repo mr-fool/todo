@@ -48,8 +48,8 @@ class App extends Component{
   }
 
   render() {
-    <ThemeProvider theme={{}}> 
     return (
+      <ThemeProvider>
       <Router>
           <div className="App">
             <div className="container">
@@ -66,8 +66,8 @@ class App extends Component{
               </div>  
           </div>
       </Router>
+      </ThemeProvider>
     );
-    </ThemeProvider>
 
   }
   
