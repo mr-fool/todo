@@ -59,7 +59,7 @@ const btnStyle = {
     borderRadius: '50%',
     float: "right"
 }
-const styles = {
+const styles = (theme) => {
     button: {
       margin: theme.spacing(1),
     },
