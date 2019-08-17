@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from "prop-types";
 import Button from "@material-ui/core/Button";
-import { makeStyles, withStyles } from "@material-ui/core/styles";
+import { withStyles } from "@material-ui/core/styles";
 import DeleteIcon from "@material-ui/icons/Delete";
 
 export class TodoItem extends Component {
@@ -26,6 +26,7 @@ export class TodoItem extends Component {
 
 
     render() {
+        const { classes } = this.props;
         const { id,title } =this.props.todo;
         console.log(id);
         return (
@@ -72,4 +73,4 @@ const styles = {
       fontSize: 20,
     }
   };
-export default TodoItem
+  export default withStyles(styles)(TodoItem);
